@@ -25,6 +25,7 @@ function validateSession(req,res,next){
 function ValidateLog(req,res,next){
   if(!req.session.user){
     req.session.loggedIn=false;
+    console.log("log flase");
   }
   if(req.session.user){
     res.redirect('/home')
@@ -34,6 +35,7 @@ function ValidateLog(req,res,next){
 }
 
 router.get('/',ValidateLog,(req,res)=>{
+  console.log("Validate log working");
   res.render('index')
 })
 
@@ -46,6 +48,12 @@ router.get('/home',validateSession,(req,res)=>{
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
+router.get('/logout',(req,res)=>{
+  req.session=null
+  res.render('index')
+})
+
 router.post('/login',validateUser,(req,res)=>{
   req.session.loggedIn=true;
   req.session.user=Username
