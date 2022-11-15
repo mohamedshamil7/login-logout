@@ -5,10 +5,12 @@
                 {{#each products}}
                 <ul class="list-group">
   <li class="list-group-item disabled" >
-    <img style="width: 75px;" src="{{this.Image}}" alt="">
-    <h4>{{this.id}}.{{this.name}}</h4>
-  <p>{{this.Category}}</p><br>
-  <p>{{this.description}}</p></li>
+    <img style="width:200px ;" src="{{this.imageUrl}}" alt="">
+    <h4>{{this.name}}</h4>
+    <h4>{{this.brand}}</h4>
+  <p>{{this.price}}</p><br>
+<a href="#" class="btn btn-primary">Buy</a>
+  </li>
   
 </ul>
 {{/each}}
