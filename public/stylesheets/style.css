@@ -2,7 +2,7 @@
 
 .login-page,.logind{
   text-align: center;
-  background-color: #95B3CA;
+  background-color: #E6E6E4;
   width: 100%;
   height: 800px;
 }
@@ -13,3 +13,11 @@
 .Username{
   padding-top: 20%;
 }
+.inp-box{
+  width: 25%;
+  margin: 1%;
+  border-radius: 5px;
+  border-color: none;
+
+}
+
